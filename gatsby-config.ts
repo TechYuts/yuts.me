@@ -31,7 +31,19 @@ const config: GatsbyConfig = {
       },
       __key: "pages",
     },
+    {
+      resolve: "gatsby-plugin-google-fonts",
+      options: {
+        fonts: [
+          "inter:200,400",
+        ]
+      },
+    },
   ],
 };
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 export default config;
